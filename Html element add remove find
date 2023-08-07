@@ -1,0 +1,48 @@
+//html file
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="mydiv" style="background-color: lightgreen;">
+         <h1>GoodBye</h1>
+    <h1>Hello</h1>
+    </div>
+   
+
+    <script src="addhtml.js"></script>
+
+</body>
+</html>
+
+
+//javadcript files
+//aading html element 
+var heading=document.createElement("h1");
+var text=document.createTextNode("This is a new heading ");
+heading.appendChild(text);
+
+var myDiv=document.getElementsByClassName("mydiv")[0];
+myDiv.appendChild(heading);
+
+//removing an element 
+var hea=document.getElementsByTagName("h1")[1];
+myDiv.removeChild(hea);
+
+//insert element before an element 
+
+var heading0=document.createElement("h1");
+var text0=document.createTextNode("This is a new heading hh ");
+heading0.appendChild(text0);
+
+var heaa=document.getElementsByTagName("h1")[0];
+myDiv.insertBefore(heading0,heaa);
+
+
+
+
+
