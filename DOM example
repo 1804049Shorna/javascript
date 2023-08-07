@@ -1,0 +1,24 @@
+//get element by ID
+
+var myhead=document.getElementById("heading");
+myhead.innerHTML="heloo";
+
+ myhead=myhead.innerHTML="hellloooooo";
+
+ var pa=document.getElementById("para");
+
+pa.innerHTML="This is not a para";
+
+var hh=document.getElementsByClassName("h2")[0];
+hh.innerHTML="H!";
+
+//example of queryselector
+
+ var qq=document.querySelector("#heading").innerHTML="query selector id";
+ var qq1=document.querySelector(".h1").innerHTML="query selector class";
+
+// link selection
+
+//
+var qq3 = document.querySelector("ul li a").innerHTML="home1";
+
