@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+       <!-- <h1 id="heading">THis is heading </h1>
+       <p id="para"> this is a paragraph</p>
+       <h1 id="heading" class="h1">THis is heading </h1>
+       <p id="para" class="h2"> this is a paragraph</p> -->
+
+       <!-- for query selection -->
+       <a href="#" id="aa">Home</a>
+       <ul>
+        <li><a href="#">Tutorial</a></li>
+        <li>Bangladesh</li>
+       </ul>
+       <div class="my-div">
+        <a href="#">Contact</a>
+
+       </div>
+       <p id="p"></p>
+       <button onclick="myMessage()">Click me</button>
+      
+       <!-- button to show image  -->
+       <button onclick="show()">Shorna</button>
+
+       <img id="pic" src="#">
+       
+      
+
+      
+    
+    <script src="index.js"></script>
+    <script src="onclick.js"></script>
+    
+</body>
+</html>
+
+
+
+//javascript file 
+
+function myMessage(){
+    //alert("Hello Everyone");
+   var b1= document.querySelector("#p");
+   b1.innerHTML="you just click me";
+
+   var imm= document.querySelector("#pic");
+   imm.src="image\nahidshorna2.jpg.jpeg";
+
+}
+
+function show(){
+    //alert("Hello Everyone");
+   var imm= document.getElementById("pic");
+   imm.src="nahidshorna2.jpg.jpeg";
+  
+
+}
