@@ -1,0 +1,60 @@
+//imageslider HTML part 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="previous()">Previous</button>
+    <img src="image/1.jpg" alt="" height="100">
+    <button onclick="next()">Next</button>
+    <script></script>
+    <script src="imageslider.js"></script>
+</body>
+</html>
+
+
+
+
+//imageslider javascript part 
+var photos=["image/1.jpg","image/2.jpg","image/3.jpg","image/4.jpeg"];
+
+var stimg=document.querySelector("img");
+
+var len=photos.length;
+
+var count=0;
+
+function next(){
+
+   count++;
+
+   
+    stimg.src=photos[count];
+
+   if(count==len){
+         count=0;
+         stimg.src=photos[0];
+     }
+  
+   
+      
+
+}
+
+function previous(){
+    count--;
+    stimg.src=photos[count];
+
+    if(count==-1){
+        count=0;
+        stimg.src=photos[len-1];
+    }
+ 
+
+
+}
+
