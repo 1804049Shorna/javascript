@@ -1,0 +1,78 @@
+//html part 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>This is a heading</h1>
+
+    <p>This is a demo</p>
+
+    <button id="mybutton">button 1</button>
+    <button id="mybutton">button 2</button>
+    <button id="mybutton">button 3</button>
+    <script src="mulevent.js"></script>
+</body>
+</html>
+//js file 
+// document.querySelectorAll("#mybutton")[0].addEventListener("click",function(){
+
+//     var text=this.innerHTML;
+
+//     document.querySelector("h1").innerHTML=text+"is clicked";
+// })
+
+// document.querySelectorAll("#mybutton")[1].addEventListener("click",function(){
+
+//     var text=this.innerHTML;
+
+//     document.querySelector("h1").innerHTML=text+"is clicked";
+// })
+
+// document.querySelectorAll("#mybutton")[2].addEventListener("click",function(){
+
+//     var text=this.innerHTML;
+
+//     document.querySelector("h1").innerHTML=text+"is clicked";
+// })
+
+var len=document.querySelectorAll("#mybutton").length;
+
+for(var i=0;i<len;i++)
+{
+    document.querySelectorAll("#mybutton")[i].addEventListener("click",function(){
+
+    var text=this.innerHTML;
+
+    document.querySelector("h1").innerHTML=text+"is clicked";
+})
+}
+
+var len=document.querySelectorAll("#mybutton").length;
+
+for(var i=0;i<len;i++)
+{
+    document.querySelectorAll("#mybutton")[i].addEventListener("click",function(){
+
+    var text=this.innerHTML;
+
+    switch(text){
+        case "button 1":
+            var audi=new Audio("image/Jingle Bells with Lyrics _ Christmas Songs HD _ Christmas Songs and Carols_3CWJNqyub3o (1).mp3");
+            audi.play();
+    }
+        
+
+})
+}
+
+document.addEventListener("keypress",function(event){
+    var text=event.key;
+    document.querySelector("p").innerHTML="something "+text;
+
+})
