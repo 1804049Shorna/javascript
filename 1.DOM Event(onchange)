@@ -1,0 +1,87 @@
+//HTML Part 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- <label for="">Name : 
+        <input type="text" class="inputname">
+    </label> -->
+<!-- //input tag DOM Event -->
+    <!-- <label for="c">
+        <input type="checkbox" name="program"id="" value="c">C
+    </label>
+    <label for="java">
+        <input type="checkbox" name="program"id=""value="java">java
+    </label> -->
+
+    <!-- //select tag DOM Event -->
+    <select name="department" id="dep">
+        <option value="cse" name="dd">CSE</option>
+        <option value="eee" name="dd">EEE</option>
+        <option value="ete" name="dd">ETE</option>
+    </select>
+    <script src="index.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+//javasrcipt part 
+
+
+
+
+// var inn=document.querySelector("input");
+// inn.addEventListener("change",onchange);
+
+// function onchange(e){
+//     console.log("changed");
+//      console.log(e.type);
+
+//       console.log(e.target);
+//       console.log(e.target.className);
+//       console.log(e.target.value);
+
+
+// }
+
+console.clear();
+var programs=document.querySelectorAll('input[name=program]');
+console.log(programs);
+
+Array.from(programs).map((program)=>{
+    program.addEventListener("change",programhandler);
+})
+
+function programhandler(e){
+    if(e.target.checked){
+         console.log("change");
+         console.log(e.target.value);
+    }
+   
+
+}
+
+var prog=document.querySelector("#dep");
+console.log(prog);
+
+prog.addEventListener("change",handleoption);
+
+function handleoption(e){
+   console.log(e.target.value);
+}
+
+
+
+
+
